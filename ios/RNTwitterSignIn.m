@@ -57,5 +57,6 @@ RCT_EXPORT_METHOD(logOut)
     TWTRSessionStore *store = [[Twitter sharedInstance] sessionStore];
     NSString *userID = store.session.userID;
     [store logOutUserID:userID];
+    authNotResolved = true;
 }
 @end
